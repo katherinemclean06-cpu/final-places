@@ -22,11 +22,31 @@
     
   a { color: white; }
      
-  .header {
+    .header {
+  position: relative;
   padding-bottom: 50px;
   padding-top: 15px;
   text-align: center;
-  background: #4851A8;
+  overflow: hidden;
+  background-image: url("lobby.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("lobby.jpeg");
+  background-size: cover;
+  background-position: 60% 40%;
+
+  filter: brightness(35%); /* ONLY affects image */
+  z-index: 0;
+}
+  .header * {
+  position: relative;
+  z-index: 1;
 }
   .fa {
   padding: 5px;
@@ -48,18 +68,34 @@
 }
     
   h1 { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
   text-align: center;
-  color: #4851A8;
+  color: #6A251A;
   font-optical-sizing: auto;
   background-color: white;
   font-size: 95px;
-  padding: 40px;
+  padding: 10px 40px;
   font-family: "Truculenta", Georgia, serif;
   }
   
+  h1::before,
+  h1::after {
+  content: "★";
+  color: #6A251A;
+  font-size: 40px; /* slightly bigger to match h1 */
+  }
+  
   h2 {
+  display: flex;
   text-align: center;
-  color: #4851A8;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  color: #6A251A;
   font-optical-sizing: auto;
   background-color: white;
   font-size: 75px;
@@ -68,13 +104,20 @@
   font-family: "Truculenta", Georgia, serif;
   }
   
+  h2::before,
+  h2::after {
+  content: "★";
+  color: #6A251A;
+  font-size: 30px;
+  }
+  
   nav {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-size: 25px;
   font-style: normal;
   text-align: center;
-  width: 900; 
+  width: 725px; 
   margin: auto;
 }
   ul{
@@ -87,12 +130,16 @@
   ul li {
   display: block;
   text-align: center;
-  padding: 25px;
+  padding: 10px 25px 15px;
   float: left;
+  line-height: 2.5;
   }
   
   ul li a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 10px;
   color: white;
   }
   
@@ -145,7 +192,7 @@
   font-style: Arial, georgia, sans serif;
   font-size: 20px;
   text-align: center;
-  background: #4851A8;
+  background: #3B3939;
   color: white;
   margin-top: 15px;
   padding-top: 25px;
@@ -162,7 +209,6 @@
       <nav>
         <ul>
           <li><a href="/">HOME</a></li>
-          <li><a href="/">SHOOTS</a></li>
           <li><a href="/">PEOPLE</a></li>
           <li><a href="/">PLACES</a></li>
           <li><a href="/">NATURE</a></li>
@@ -171,7 +217,7 @@
     </nav>
   </div>
   
-  <h2>PLACES:</h2>
+  <h2>PLACES</h2>
   
   <div class="row">
     <div class="column">
@@ -189,7 +235,6 @@
         <div class="img-container"><img src="claw.jpg" style="width:100%" alt="A row of pink claw machines with bright pink lights."></div>
         <div class="img-container"><img src="cntower2.jpeg" style="width:100%" alt="Image of the CN Tower from below a tall flight of stairs."></div>
         <div class="img-container"><img src="freak.JPG" style="width:100%" alt="Graffiti on a cement block at a skatepark reading 'FREAK MODE'."></div>
-        <div class="img-container"><img src="rogers.png" style="width:100%" alt="The Rogers Centre and Aquarium lit up with colourful LEDs after dark."></div>
         <div class="img-container"><img src="Tremor.JPG" style="width:100%" alt="Dark-haired man BMX biking down a ramp that reads 'TREMOR'."></div>
         <div class="img-container"><img src="christmas.jpeg" style="width:100%" alt="White Christmas tree with red and green ornaments and sparkling gold lights."></div>
     </div>
@@ -205,7 +250,6 @@
         <div class="img-container"><img src="lobby.jpeg" style="width:100%" alt="A set of ornate wood rocking chairs in an old wooden lobby with warm vintage lights."></div>
         <div class="img-container"><img src="newfoundland.jpeg" style="width:100%" alt="A blonde woman leaning on a railing next to a pond with mountains and a sunset behind her."></div>
         <div class="img-container"><img src="pier.jpeg" style="width:100%" alt="A set of white boats on a wooden slat pier next to the ocean, with the sun starting to set in the background."></div>
-        <div class="img-container"><img src="sand.jpeg" style="width:100%" alt="A piece of colourful fabric with a silver bell draped over a sandy beach with a low, hazy sun in the background."></div>
         <div class="img-container"><img src="statue.jpeg" style="width:100%" alt="statue of a lion in front of the New York City public library."></div>
         <div class="img-container"><img src="stonewall.jpeg" style="width:100%" alt="An old stone wall with 'Chateau' carved into the side."></div>
         <div class="img-container"><img src="sunset.jpeg" style="width:100%" alt="A colourful sunset outside of the window, seen behind a made bed in a dark room."></div>
@@ -226,8 +270,9 @@
         <div class="img-container"><img src="Zebra.jpeg" style="width:100%" alt="A painting of a Zebra's face next to a zebra-print painted wall."></div>
         <div class="img-container"><img src="core.JPG" style="width:100%" alt="A hand holding a half-eaten yellow apple, with green leaves out of focus in the background."></div>
         <div class="img-container"><img src="Empire.JPG" style="width:100%" alt="A sign reading 'empire' in front of a row of apple trees."></div>
-        <div class="img-container"><img src="tower.png" style="width:100%" alt="Close-up of the CN Tower with colourful lights after dark."></div>
         <div class="img-container"><img src="Intersection.JPG" style="width:100%" alt="Two street signs intersecting."></div>
+        <div class="img-container"><img src="rogers.png" style="width:100%" alt="The Rogers Centre and Aquarium lit up with colourful LEDs after dark."></div>
+        <div class="img-container"><img src="sand.jpeg" style="width:100%" alt="A piece of colourful fabric with a silver bell draped over a sandy beach with a low, hazy sun in the background."></div>
     </div>
 </div>
   
