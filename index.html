@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <title>Photography Portfolio</title>
+    <title>Photography Portfolio</title>
   
   <style>
   
@@ -22,7 +21,7 @@
     
   a { color: white; }
      
-    .header {
+  .header {
   position: relative;
   padding-bottom: 50px;
   padding-top: 15px;
@@ -30,17 +29,14 @@
   overflow: hidden;
   background-image: url("lobby.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
 }
   .header::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background-image: url("lobby.jpeg");
   background-size: cover;
   background-position: 60% 40%;
-
   filter: brightness(35%); /* ONLY affects image */
   z-index: 0;
 }
@@ -53,18 +49,14 @@
   font-size: 30px;
   width: 50px;
   text-align: center;
-  text-decoration: none;
 }
 
-  .fa:hover {
-  opacity: 0.7;
-}
+  .fa:hover { opacity: 0.7; }
 
   .fa-instagram {
   color: white;
   position: absolute;
   left: 20px;
-  right: 20px;
 }
     
   h1 { 
@@ -72,51 +64,39 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
-  text-align: center;
   color: #6A251A;
-  font-optical-sizing: auto;
   background-color: white;
   font-size: 95px;
   padding: 10px 40px;
   font-family: "Truculenta", Georgia, serif;
   }
   
-  h1::before,
-  h1::after {
+  h1::before, h1::after {
   content: "★";
-  color: #6A251A;
-  font-size: 40px; /* slightly bigger to match h1 */
+  font-size: 40px;
   }
   
   h2 {
   display: flex;
-  text-align: center;
-  align-items: center;
   justify-content: center;
   gap: 20px;
-  text-align: center;
   color: #6A251A;
-  font-optical-sizing: auto;
   background-color: white;
   font-size: 75px;
-  padding: 0px;
   margin: 5px;
   font-family: "Truculenta", Georgia, serif;
   }
   
-  h2::before,
-  h2::after {
+  h2::before, h2::after {
   content: "★";
-  color: #6A251A;
   font-size: 30px;
+  display: flex;
+  align-items: center;
   }
   
   nav {
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
   font-size: 25px;
-  font-style: normal;
-  text-align: center;
   width: 725px; 
   margin: auto;
 }
@@ -128,24 +108,18 @@
   }
   
   ul li {
-  display: block;
-  text-align: center;
-  padding: 10px 25px 15px;
   float: left;
-  line-height: 2.5;
+  padding: 10px 25px 15px;
   }
   
   ul li a {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  text-decoration: underline dotted;
   text-underline-offset: 12px;
   text-decoration-thickness: 10px;
   color: white;
   }
   
-  nav li a:hover {
-  color: gray;
-  }
+  nav li a:hover { color: gray; }
     
   .row {
   display: flex;
@@ -174,6 +148,35 @@
   transform: scale(1.1);
   filter: brightness(80%);
 }
+    
+  .lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+  
+  .lightbox:target {
+  display: flex;
+}
+    
+  .lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+  
+  .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+}
+    
   @media screen and (max-width: 800px) {
   .column {
   flex: 50%;
@@ -189,23 +192,21 @@
   }
   
   footer {
-  font-style: Arial, georgia, sans serif;
   font-size: 20px;
   text-align: center;
   background: #3B3939;
   color: white;
-  margin-top: 15px;
-  padding-top: 25px;
-  padding-bottom: 45px;
+  margin-top: 10px;
+  padding: 20px 0 20px;
   }
-    </style>
-  </head>
+  </style>
+</head>
   
 <body>
     <div class="header">
     <a href="https://www.instagram.com/katiemc888?igsh=OXl4aWhtemR6d20z" class="fa fa-instagram"></a>
 
-      <h1>Katie McLean Photography</h1>
+    <h1>Katie McLean Photography</h1>
       <nav>
         <ul>
           <li><a href="/">HOME</a></li>
@@ -221,58 +222,195 @@
   
   <div class="row">
     <div class="column">
-        <div class="img-container"><img src="thrift1.png" style="width:100%" alt="Hands sifting through nice suit jackets at a thrift store."></div>
-        <div class="img-container"><img src="boats1.jpeg" style="width:100%" alt="A white boat in the water on an ocean coastline next to a row of colourful sheds."></div>
-        <div class="img-container"><img src="boats.jpeg" style="width:100%" alt="A white boat next to a dirt path with a sunset in the background."></div>
-        <div class="img-container"><img src="bridge.jpeg" style="width:100%" alt="Pont Du Gard France, an old aqueduct stone bridge."></div>
-        <div class="img-container"><img src="building.jpeg" style="width:100%" alt="An image of an oddly shaped glass office building downtown Toronto."></div>
-        <div class="img-container"><img src="cafe.jpeg" style="width:100%" alt="The storefront of the Starlight Cafe in Stratford, a blue front with a bright orange sign."></div>
-        <div class="img-container"><img src="cafe1.jpeg" style="width:100%" alt="Image of a small cafe in Waterloo with cool gold lights and black stools."></div>
-        <div class="img-container"><img src="car.jpeg" style="width:100%" alt="A lone black car in an empty snowy parking lot with orange sky behind."></div>
-        <div class="img-container"><img src="Halloween.JPG" style="width:100%" alt="The lanky hand of a creepy halloween decoration reaching toward the camera."></div>
-        <div class="img-container"><img src="Skulls.JPG" style="width:100%" alt="Three plastic skulls hanging on a string on a cloudy fall day."></div>
-        <div class="img-container"><img src="bar.png" style="width:100%" alt="The storefront of a bar in Toronto with a sign reading 'Toronto's Oldest Bar'."></div>
-        <div class="img-container"><img src="claw.jpg" style="width:100%" alt="A row of pink claw machines with bright pink lights."></div>
-        <div class="img-container"><img src="cntower2.jpeg" style="width:100%" alt="Image of the CN Tower from below a tall flight of stairs."></div>
-        <div class="img-container"><img src="freak.JPG" style="width:100%" alt="Graffiti on a cement block at a skatepark reading 'FREAK MODE'."></div>
-        <div class="img-container"><img src="Tremor.JPG" style="width:100%" alt="Dark-haired man BMX biking down a ramp that reads 'TREMOR'."></div>
-        <div class="img-container"><img src="christmas.jpeg" style="width:100%" alt="White Christmas tree with red and green ornaments and sparkling gold lights."></div>
+      
+<div class="img-container">
+<a href="#img1"><img src="thrift1.png" style="width:100%" alt="Hands sifting through nice suit jackets at a thrift store."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img2"><img src="boats1.jpeg" style="width:100%" alt="A white boat in the water on an ocean coastline next to a row of colourful sheds."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img3"><img src="boats.jpeg" style="width:100%" alt="A white boat next to a dirt path with a sunset in the background."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img4"><img src="bridge.jpeg" style="width:100%" alt="Pont Du Gard France, an old aqueduct stone bridge."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img5"><img src="building.jpeg" style="width:100%" alt="An image of an oddly shaped glass office building downtown Toronto."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img6"><img src="cafe.jpeg" style="width:100%" alt="The storefront of the Starlight Cafe in Stratford, a blue front with a bright orange sign."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img7"><img src="cafe1.jpeg" style="width:100%" alt="Image of a small cafe in Waterloo with cool gold lights and black stools."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img8"><img src="car.jpeg" style="width:100%" alt="A lone black car in an empty snowy parking lot with orange sky behind."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img9"><img src="Halloween.JPG" style="width:100%" alt="The lanky hand of a creepy halloween decoration reaching toward the camera."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img10"><img src="Skulls.JPG" style="width:100%" alt="Three plastic skulls hanging on a string on a cloudy fall day."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img11"><img src="bar.png" style="width:100%" alt="The storefront of a bar in Toronto with a sign reading 'Toronto's Oldest Bar'."></a>
+</div>
+      
+<div class="img-container">
+<a href="#img12"><img src="claw.jpg" style="width:100%" alt="A row of pink claw machines with bright pink lights.">
+</div>
+  
+<div class="img-container">
+<a href="#img13"><img src="cntower2.jpeg" style="width:100%" alt="Image of the CN Tower from below a tall flight of stairs.">
+</div>
+  
+<div class="img-container">
+<a href="#img14"><img src="freak.JPG" style="width:100%" alt="Graffiti on a cement block at a skatepark reading 'FREAK MODE'.">
+</div>
+        
+<div class="img-container">
+<a href="#img15"><img src="Tremor.JPG" style="width:100%" alt="Dark-haired man BMX biking down a ramp that reads 'TREMOR'."></a>
+</div>
+
+<div class="img-container">
+<a href="#img16"><img src="christmas.jpeg" style="width:100%" alt="White Christmas tree with red and green ornaments and sparkling gold lights."></a>
+</div>
+  
+</div>
+  
+<div class="column">
+<div class="img-container">
+<a href="#img17"><img src="cntower1.png" style="width:100%" alt="The CN tower, lit up as the sun starts to set."></a>
+</div>
+        
+<div class="img-container">
+<a href="#img18"><img src="church.jpeg" style="width:100%" alt="A white church with a red roof on a hill with a sunset behind it."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img19"><img src="Club.jpeg" style="width:100%" alt="A neon sign that says 'please don't do coke in the bathroom' in a dark club with purple and red lights."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img20"><img src="concert.jpeg" style="width:100%" alt="Sun setting behind a crowd of people outside of Budweiser stadium.">
+</div>
+  
+<div class="img-container">
+<a href="#img21"><img src="feeder.jpeg" style="width:100%" alt="A bird feeder shaped like a bluejay against a pink sun setting over the ocean."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img22"><img src="hotel.jpeg" style="width:100%" alt="Leather sofas in a big room with old wood and ornate decor."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img23"><img src="lifeguard.jpeg" style="width:100%" alt="A bright red wooden stand holding a life saver against the dark blue ocean."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img23"><img src="lobby.jpeg" style="width:100%" alt="A set of ornate wood rocking chairs in an old wooden lobby with warm vintage lights."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img24"><img src="newfoundland.jpeg" style="width:100%" alt="A blonde woman leaning on a railing next to a pond with mountains and a sunset behind her."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img25"><img src="pier.jpeg" style="width:100%" alt="A set of white boats on a wooden slat pier next to the ocean, with the sun starting to set in the background."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img26"><img src="statue.jpeg" style="width:100%" alt="statue of a lion in front of the New York City public library."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img27"><img src="stonewall.jpeg" style="width:100%" alt="An old stone wall with 'Chateau' carved into the side."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img28"><img src="sunset.jpeg" style="width:100%" alt="A colourful sunset outside of the window, seen behind a made bed in a dark room."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img29"><img src="toronto.jpeg" style="width:100%" alt="A tall glass building in Toronto on a sunny day."></a>
+</div>
     </div>
   
-    <div class="column">
-        <div class="img-container"><img src="cntower1.png" style="width:100%" alt="The CN tower, lit up as the sun starts to set."></div>
-        <div class="img-container"><img src="church.jpeg" style="width:100%" alt="A white church with a red roof on a hill with a sunset behind it."></div>
-        <div class="img-container"><img src="Club.jpeg" style="width:100%" alt="A neon sign that says 'please don't do coke in the bathroom' in a dark club with purple and red lights."></div>
-        <div class="img-container"><img src="concert.jpeg" style="width:100%" alt="Sun setting behind a crowd of people outside of Budweiser stadium."></div>
-        <div class="img-container"><img src="feeder.jpeg" style="width:100%" alt="A bird feeder shaped like a bluejay against a pink sun setting over the ocean."></div>
-        <div class="img-container"><img src="hotel.jpeg" style="width:100%" alt="Leather sofas in a big room with old wood and ornate decor."></div>
-        <div class="img-container"><img src="lifeguard.jpeg" style="width:100%" alt="A bright red wooden stand holding a life saver against the dark blue ocean."></div>
-        <div class="img-container"><img src="lobby.jpeg" style="width:100%" alt="A set of ornate wood rocking chairs in an old wooden lobby with warm vintage lights."></div>
-        <div class="img-container"><img src="newfoundland.jpeg" style="width:100%" alt="A blonde woman leaning on a railing next to a pond with mountains and a sunset behind her."></div>
-        <div class="img-container"><img src="pier.jpeg" style="width:100%" alt="A set of white boats on a wooden slat pier next to the ocean, with the sun starting to set in the background."></div>
-        <div class="img-container"><img src="statue.jpeg" style="width:100%" alt="statue of a lion in front of the New York City public library."></div>
-        <div class="img-container"><img src="stonewall.jpeg" style="width:100%" alt="An old stone wall with 'Chateau' carved into the side."></div>
-        <div class="img-container"><img src="sunset.jpeg" style="width:100%" alt="A colourful sunset outside of the window, seen behind a made bed in a dark room."></div>
-        <div class="img-container"><img src="toronto.jpeg" style="width:100%" alt="A tall glass building in Toronto on a sunny day."></div>
-    </div>
+<div class="column">
+<div class="img-container">
+<a href="#img30"><img src="thrift2.JPG" style="width:100%" alt="A sunglass rack in a thrift store with a rack of colourful clothes in the background."></a>
+</div>
   
-    <div class="column">
-        <div class="img-container"><img src="thrift2.JPG" style="width:100%" alt="A sunglass rack in a thrift store with a rack of colourful clothes in the background."></div>
-        <div class="img-container"><img src="ferris.jpeg" style="width:100%" alt="A pink ferris wheel against a light blue sku with fluffy clouds."></div>
-        <div class="img-container"><img src="festival.jpeg" style="width:100%" alt="A low sun starting to set over a field of people at a music festival."></div>
-        <div class="img-container"><img src="fireworks.jpeg" style="width:100%" alt="Red and yellow fireworks going off in the night sky behind the silhouettes of a married couple."></div>
-        <div class="img-container"><img src="flowerwall.jpeg" style="width:100%" alt="A wall of light pink flowers with a pink neon sign that says 'Hello Gorgeous'."></div>
-        <div class="img-container"><img src="france.jpeg" style="width:100%" alt="The front pillars of a stone Roman collosseum in France."></div>
-        <div class="img-container"><img src="hallway.jpeg" style="width:100%" alt="A dark hallway with big windows and bright sunlight streaming through the windows."></div>
-        <div class="img-container"><img src="pillar.jpeg" style="width:100%" alt="A wooden pillar with colourful wooden tabs directing to surrounding landmarks."></div>
-        <div class="img-container"><img src="radiocity.jpeg" style="width:100%" alt="The sun setting behind the Radio City building in New York City."></div>
-        <div class="img-container"><img src="toronto1.jpeg" style="width:100%" alt="A beautiful glass and white stone building in Toronto."></div>
-        <div class="img-container"><img src="Zebra.jpeg" style="width:100%" alt="A painting of a Zebra's face next to a zebra-print painted wall."></div>
-        <div class="img-container"><img src="core.JPG" style="width:100%" alt="A hand holding a half-eaten yellow apple, with green leaves out of focus in the background."></div>
-        <div class="img-container"><img src="Empire.JPG" style="width:100%" alt="A sign reading 'empire' in front of a row of apple trees."></div>
-        <div class="img-container"><img src="Intersection.JPG" style="width:100%" alt="Two street signs intersecting."></div>
-        <div class="img-container"><img src="rogers.png" style="width:100%" alt="The Rogers Centre and Aquarium lit up with colourful LEDs after dark."></div>
-        <div class="img-container"><img src="sand.jpeg" style="width:100%" alt="A piece of colourful fabric with a silver bell draped over a sandy beach with a low, hazy sun in the background."></div>
+<div class="img-container">
+<a href="#img31"><img src="ferris.jpeg" style="width:100%" alt="A pink ferris wheel against a light blue sku with fluffy clouds."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img32"><img src="festival.jpeg" style="width:100%" alt="A low sun starting to set over a field of people at a music festival."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img33"><img src="fireworks.jpeg" style="width:100%" alt="Red and yellow fireworks going off in the night sky behind the silhouettes of a married couple."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img34"><img src="flowerwall.jpeg" style="width:100%" alt="A wall of light pink flowers with a pink neon sign that says 'Hello Gorgeous'."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img35"><img src="france.jpeg" style="width:100%" alt="The front pillars of a stone Roman collosseum in France."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img36"><img src="hallway.jpeg" style="width:100%" alt="A dark hallway with big windows and bright sunlight streaming through the windows."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img37"><img src="pillar.jpeg" style="width:100%" alt="A wooden pillar with colourful wooden tabs directing to surrounding landmarks."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img38"><img src="radiocity.jpeg" style="width:100%" alt="The sun setting behind the Radio City building in New York City."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img39"><img src="toronto1.jpeg" style="width:100%" alt="A beautiful glass and white stone building in Toronto."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img40"><img src="Zebra.jpeg" style="width:100%" alt="A painting of a Zebra's face next to a zebra-print painted wall.">
+</div>
+  
+<div class="img-container">
+<a href="#img41"><img src="core.JPG" style="width:100%" alt="A hand holding a half-eaten yellow apple, with green leaves out of focus in the background."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img42"><img src="Empire.JPG" style="width:100%" alt="A sign reading 'empire' in front of a row of apple trees."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img43"><img src="Intersection.JPG" style="width:100%" alt="Two street signs intersecting."></a>
+</div>
+  
+<div class="img-container">
+<a href="#img44"><img src="rogers.png" style="width:100%" alt="The Rogers Centre and Aquarium lit up with colourful LEDs after dark."></a>
+</div>
+
+<div class="img-container">
+<a href="#img45"><img src="sand.jpeg" style="width:100%" alt="A piece of colourful fabric with a silver bell draped over a sandy beach with a low, hazy sun in the background."></a>
+</div>
     </div>
 </div>
   
